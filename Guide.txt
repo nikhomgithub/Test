@@ -1,0 +1,65 @@
+There are 4 level of Testing 
+From Top (Slow&Expensive) To Bottom(Fast&Cheap)
+  
+  E2E (Full Stack test in user view)
+  Integration (test of multiple-function or multiple-componet)
+  Unit (a isolated-single function test)
+  Snapshot (Just to compare before-after of a component)
+
+Test Tool
+1.JEST 
+ automatic with create-react-app
+ or 
+ npm install --save jest
+ https://jestjs.io/docs/en/tutorial-react
+
+2.Enzyme 
+ npm i --save-dev enzyme
+ https://airbnb.io/enzyme/docs/installation/
+
+
+
+Snapshot Test
+=============
+we want to test how App.js change
+
+------------------------------
+App.js
+
+import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+
+        <h1>GOODss</h1>
+       
+    </div>
+  );
+}
+
+export default App;
+-------------------------------
+App.test.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import renderer from 'react-test-renderer';
+
+test ("snapshot test",()=>{
+  const tree=renderer.create(<App/>).toJSON();
+  //console.log(tree);
+  expect(tree).toMatchSnapshot();
+})
+------------------------------
+$npm test
+whenever change in App.js it will fail
+(because it fail toMatchSnapshot() between previous-current)
+
+
+https://jestjs.io/docs/en/tutorial-react
+
+sudo npm install --save-dev jest
+sudo npm install react-test-renderer

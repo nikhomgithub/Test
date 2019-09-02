@@ -1,0 +1,63 @@
+Jest
+
+How to test function & componemt & redux
+
+Method  shallow, mount, td.verify, snapshot
+
+test('xxx',()=>{
+    const result=function()
+
+    expect( result ) .toBe( )
+    expect( result ) .toBeNull( )
+    expect( result ) .toBeFalsy( )
+    expect( result ) .toEqual( )
+})
+
+test('xxx',()=>{
+    const wrapper=shallow(<App sth={sth}/>)
+
+    const result=wrapper.contains()
+    const result=wrapper.containsMatchingElement(<img />)
+    const result=wrapper.find('h1').txt()
+    const result=wrapper.find('[d-t="ti"]').txt()
+
+
+    expect( result ) .toBe( )
+    expect( result ) .toBeNull( )
+    expect( result ) .toBeFalsy( )
+    expect( result ) .toEqual( )
+})
+
+test('xxx',()=>{
+    const act=td.function('arg')
+
+    const wrapper=mount(<App sth={sth} act={act}/>)
+
+    wrapper.find('[d-t="ti"]').simulate('click')
+
+    td.verify(act(5))
+})
+
+test('xxx',()=>{
+    const output=renderer.create(<App sth={sth}/>)
+    
+    expect(output).toMatchSnapshot()
+})
+//__snapshots__ folder is created in this foloder
+//press u  //to update snapshot
+
+//
+
+describe ('xx',()=>{
+    const initialState=reducer(undefined,{})
+
+    it('xx',()=>{
+        const sth=[{a:'AA'}]
+
+        const result=reducer(initialState,action.add(sth))
+
+        expect(result).toEqual({...initState,sth})
+
+    })
+
+})

@@ -1,0 +1,42 @@
+https://www.youtube.com/watch?v=Eakp29J38YA
+
+How to use Jest
+- Jest come with react
+- $sudo npm test
+
+Structure
+describe('xxx',()=>{    
+    const sth ={ a:'AA', b:'BB',.. }
+    it('1_xxx',()=>{ })
+    it('2_xxx',()=>{ })
+    ...
+})
+
+
+import { shallow } from 'enzyme';
+
+shallow
+const wrapper = shallow(<App sth={sth}/>) 
+    //make wrapper from shallow(component)
+expect(wrapper.contains(sth.a)).toBe(true) 
+    //contains    toBe
+or
+expect(wrapper.find('h1').text()).toEqual(sth.a) 
+    //find        toEqual
+or
+expect(wrapper.find('[data-test="title"]').text()).toEqual("An Album")
+    //find        toEqual
+or
+expect(wrapper.containMatchingElement(<img src="album.jpg"/>).toBe(true)) //check element
+    //containMatchingElement     toBe
+or
+expect(wrapper.containsMatchingElement(<button onClick={on_Rate_X}/>)).toBe(true)
+    //containMatchingElement     toBe
+or
+
+const onrate_Z=td.function('arg')
+
+const wrapper= mount (<App sth={sth} act={act}/>)
+wrapper.find('[btn-test="thumb-up"]').simulate('click')
+
+td.verify(onrate_Z(5))

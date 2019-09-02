@@ -1,0 +1,7 @@
+mocha will search its function
+
+destribe
+before
+before each 
+
+an run in order of file name a-z

@@ -1,0 +1,1 @@
+(base) nikhom@nikhom-X441UA:~/HomeWork2/TestProject/js-testing-introduction$ npm run test

@@ -1,0 +1,13 @@
+https://facebook.github.io/create-react-app/docs/running-tests
+
+React use jest and test runner
+Jest is a node-based runner which run on node with jsDOM (not real browser)
+Jest is not good for end-to-end test
+
+File to run jest
+.test.js
+.spec.js
+
+Normally put file with .test file
+
+$npm test   mean $jest --watchAll

@@ -1,0 +1,12 @@
+React support only Unit Test    ( not e2e test)
+
+alway run on sudo
+
+$sudo npm start
+
+$sudo npm test
+
+
+sudo npm i --save-dev enzyme enzyme-adapter-react-16
+
+

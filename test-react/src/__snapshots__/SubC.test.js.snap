@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`This is Test 2 renderer 1`] = `
+<div>
+  <ul>
+    <li>
+      <h3>
+        1
+      </h3>
+      <h4>
+        Jazz
+      </h4>
+    </li>
+    <li>
+      <h3>
+        2
+      </h3>
+      <h4>
+        Rock
+      </h4>
+    </li>
+  </ul>
+</div>
+`;
